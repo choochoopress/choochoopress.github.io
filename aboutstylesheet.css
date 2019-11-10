@@ -1,0 +1,144 @@
+body {
+    background-color: #c0ffb8;
+    cursor: url(../images/trainphotoshop.png), pointer;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+header {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header:hover {
+    cursor: url(../images/trainphotoshop.png), pointer;}
+ 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+.group img:hover {
+    box-shadow: 0 0 30px #e9d700; 
+}
+
+h1 {
+    cursor: url(../images/trainphotoshop.png), pointer;
+}
+
+p {
+    text-align: center;
+    color: #ff00ea;     
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.group {
+    margin-left: auto;
+    margin-right: auto;
+}
+#hide {
+    visibility: hidden;
+    margin-left: 2%;
+    margin-right: 5%;
+}
+#taylorgroup:hover #hide {
+    visibility: visible;
+    text-align: center;
+}
+#hideonhover {
+    visibility: hidden;
+    margin-left: 5%;
+    margin-right: 2%;
+}
+
+#emilygroup:hover #hideonhover {
+    visibility: visible;
+    text-align: center;
+
+}
+#emilygroup {
+    font-style: italic;
+}
+#taylorgroup {
+    font-style: italic;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+#paragraph {
+    clear: both;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#paragraph:hover #parisimage
+{
+    visibility: visible
+}
+#parisimage {
+    visibility: hidden;
+}
+div {
+    color: #ff1200; 
+}
+
+.TayandEm {
+    color: #acff76;
+    font-style: italic;
+    font-size: 40px;
+
+}
+#paristext {
+    font-size: 20px;
+}
+
+::selection {
+    background: #acff76;
+}
+
+
+@media screen and (max-width: 760px) {}
+
+@media screen and (min-width: 1200px) {
+    .row {
+        float: left;
+        width: 25%;
+        padding: 0px;
+        margin-right: 0px;
+        margin-bottom: 33px; }
+
+        #taylorgroup:hover #hide {
+            visibility: visible;
+            text-align: right;
+        }
+        #hideonhover {
+            visibility: hidden;
+        }
+        
+        #emilygroup:hover #hideonhover {
+            visibility: visible;
+            text-align: left;
+    }
+    #emilygroup {
+        font-style: italic;
+        line-height: 40px;
+    }
+    #taylorgroup {
+        font-style: italic;
+        line-height: 40px;
+    }
+    #hide {
+        visibility: hidden;
+    }
+    }
+    #hideonhover {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 560px) {}
+
