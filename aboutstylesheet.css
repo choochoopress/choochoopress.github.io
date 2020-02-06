@@ -1,6 +1,6 @@
 body {
     background-color: #c0ffb8;
-    cursor: url(../images/trainphotoshop.png), pointer;
+    cursor: url(trainphotoshop.png), pointer;
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
 
@@ -11,7 +11,7 @@ header {
 }
 
 header:hover {
-    cursor: url(../images/trainphotoshop.png), pointer;}
+    cursor: url(trainphotoshop.png), pointer;}
  
 img {
     display: block;
