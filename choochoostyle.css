@@ -8,6 +8,10 @@ body {
 h1 {
     cursor: url(trainphotoshop.png), pointer;
 }
+h2 {
+    font-size: 10px;
+      text-align: center;
+}
 header {
     cursor: url(trainphotoshop.png), pointer;
 }
