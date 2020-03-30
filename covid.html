@@ -9,42 +9,57 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
 	<style>
-{ box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; overflow: hidden; }
-.wrap { 
-    margin: 8px; height: 90%; width: 50%; 
-    display: flex; flex-direction: column;
+{
+  font-family: 'Avenir';
 }
-.container {
-    flex: 1 1 90%; display: flex; flex-direction: column; 
-    background-color: #eee; border: 1px solid #ccc; overflow: auto;
+.bubbleWrapper {
+	padding: 10px 10px;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	align-self: flex-end;
+  color: #fff;
 }
-.form { flex: 0 0 32px; display: flex; border: 1px solid #ddd; }
-.form > input[type=text] { flex: 1 1 auto; border: 1px solid #eee; }
-.form > input[type=button] { flex: 0 0 20%; border: 1px solid #eee; }
-.bubble { flex: 1 1 auto; clear: both; } /* clear the floats here on parent */
-.bubble p {
-    border-radius: 5px;
-    padding: 8px; margin: 8px 12px;
-    max-width: 80%;  /* this will make it not exceed 80% and then wrap */
-    position: relative; transition: background-color 0.5s; 
+.inlineContainer {
+  display: inline-flex;
 }
-.left p { background-color: #ccc; float: left; } /* floated left */
-.right p { background-color: #33c; color: #fff; float: right; } /* floated right */
-/* classes below are only for arrows, not relevant */
-.left p::before {
-    content: ''; position: absolute;
-    width: 0; height: 0; left: -8px; top: 8px;
-    border-top: 4px solid transparent;
-    border-right: 8px solid #ccc;
-    border-bottom: 4px solid transparent;
+.inlineContainer.own {
+  flex-direction: row-reverse;
 }
-.right p::after {
-    content: ''; position: absolute;
-    width: 0; height: 0; right: -8px; bottom: 8px;
-    border-top: 4px solid transparent;
-    border-left: 8px solid #33c;
-    border-bottom: 4px solid transparent;
+.inlineIcon {
+  width:20px;
+  object-fit: contain;
+}
+.ownBubble {
+	min-width: 60px;
+	max-width: 700px;
+	padding: 14px 18px;
+  margin: 6px 8px;
+	background-color: #5b5377;
+	border-radius: 16px 16px 0 16px;
+	border: 1px solid #443f56;
+ 
+}
+.otherBubble {
+	min-width: 60px;
+	max-width: 700px;
+	padding: 14px 18px;
+  margin: 6px 8px;
+	background-color: #6C8EA4;
+	border-radius: 16px 16px 16px 0;
+	border: 1px solid #54788e;
+  
+}
+.own {
+	align-self: flex-end;
+}
+.other {
+	align-self: flex-start;
+}
+span.own,
+span.other{
+  font-size: 14px;
+  color: grey;
 }
 	</style>
 		
@@ -56,25 +71,46 @@ html, body { height: 100%; overflow: hidden; }
     <div class="A Covid Correspondence">
             <p>Taylor & Cora, in real time</p>
    
-<div class="wrap">
-    <div id="chatWindow" class="container">
-        <div class="bubble left"><p>msg</p></div>
-        <div class="bubble left"><p>long message</p></div>
-        <div class="bubble right"><p>ultra long message which can wrap at eighty percent </p></div>
-        <div class="bubble left"><p>lorem ipsum</p></div>
-        <div class="bubble right"><p>very long message</p></div>    
-        <div class="bubble right"><p>one more message</p></div>    
-        <div class="bubble left"><p>lorem ipsum</p></div>
-        <div class="bubble right"><p>another message</p></div>    
-        <div class="bubble left"><p>lorem ipsum</p></div>
-        <div class="bubble right"><p>yet another message</p></div>    
-        <div class="bubble left"><p>lorem ipsum</p></div>
-    </div>
-    <div id="inputWindow" class="form">
-        <input id="inp" type="text" />
-        <input id="btn" type="button" value="Send" />
-    </div>
-</div>		
+<div class="bubbleWrapper">
+		<div class="inlineContainer">
+			<img class="inlineIcon" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png">
+			<div class="otherBubble other">
+				No ninjas!
+			</div>
+		</div><span class="other">08:41</span>
+	</div>
+	<div class="bubbleWrapper">
+		<div class="inlineContainer own">
+			<img class="inlineIcon" src="https://www.pinclipart.com/picdir/middle/205-2059398_blinkk-en-mac-app-store-ninja-icon-transparent.png">
+			<div class="ownBubble own">
+			 The first rule of being a ninja is, 'Do no harm.'
+			</div>
+		</div><span class="own">08:55</span>
+	</div>
+	<div class="bubbleWrapper">
+		<div class="inlineContainer">
+			<img class="inlineIcon" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png">
+			<div class="otherBubble other">
+				Knowing when to leave requires training.
+			</div>
+		</div>
+	</div><span class="other">10:13</span>
+	<div class="bubbleWrapper">
+		<div class="inlineContainer own">
+			<img class="inlineIcon" src="https://www.pinclipart.com/picdir/middle/205-2059398_blinkk-en-mac-app-store-ninja-icon-transparent.png">
+			<div class="ownBubble own">
+			Stunned but impressed. 
+			</div>
+		</div><span class="own">11:07</span>
+	</div>
+	<div class="bubbleWrapper">
+		<div class="inlineContainer">
+			<img class="inlineIcon" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png">
+			<div class="otherBubble other">
+				How about throwing stars?
+			</div>
+		</div><span class="other">11:11</span>
+	</div>
 
     </section>
     <div id="paragraph">
