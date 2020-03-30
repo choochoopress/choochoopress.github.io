@@ -7,6 +7,45 @@
     <title>Choo Choo Press</title>
     <link rel="stylesheet" type="text/css" href="aboutstylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+	* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; }
+.wrap { 
+    margin: 8px; height: 90%; width: 50%; 
+    display: flex; flex-direction: column;
+}
+.container {
+    flex: 1 1 90%; display: flex; flex-direction: column; 
+    background-color: #eee; border: 1px solid #ccc; overflow: auto;
+}
+.form { flex: 0 0 32px; display: flex; border: 1px solid #ddd; }
+.form > input[type=text] { flex: 1 1 auto; border: 1px solid #eee; }
+.form > input[type=button] { flex: 0 0 20%; border: 1px solid #eee; }
+.bubble { flex: 1 1 auto; clear: both; } /* clear the floats here on parent */
+.bubble p {
+    border-radius: 5px;
+    padding: 8px; margin: 8px 12px;
+    max-width: 80%;  /* this will make it not exceed 80% and then wrap */
+    position: relative; transition: background-color 0.5s; 
+}
+.left p { background-color: #ccc; float: left; } /* floated left */
+.right p { background-color: #33c; color: #fff; float: right; } /* floated right */
+/* classes below are only for arrows, not relevant */
+.left p::before {
+    content: ''; position: absolute;
+    width: 0; height: 0; left: -8px; top: 8px;
+    border-top: 4px solid transparent;
+    border-right: 8px solid #ccc;
+    border-bottom: 4px solid transparent;
+}
+.right p::after {
+    content: ''; position: absolute;
+    width: 0; height: 0; right: -8px; bottom: 8px;
+    border-top: 4px solid transparent;
+    border-left: 8px solid #33c;
+    border-bottom: 4px solid transparent;
+}
+
 </head>
 <body>
     <header>
@@ -14,91 +53,7 @@
     </header>
     <div class="A Covid Correspondence">
             <p>Taylor & Cora, in real time</p>
-    <div class="chatmessages">
-			<div class="firstBubble">
-To you and your garage,
-
-As I type this, all I can hear are the birds outside my window, perched out on a tree branch that’s swaying back and forth. Every few minutes, a siren will start blaring, so loud you can hear it course up and out of the streets, seeping into all of the apartments. I don’t know whether that siren is taking someone away, or picking someone up, but I know, under my skin and down to my bones, that it is for someone who is sick. When it fades, I can still hear the birds, chirping.
-
-I try to still go on runs, but it’s hard, especially when I see all of these people in masks, crouching away from one another. I hate seeing the look on someone’s face when I pass them too closely. I hate feeling myself flinch back.
-
-Mostly I stay inside now, reading. I taped up this poem on my wall. I can’t stop thinking about it. 
-
-Why should we hurry -- why indeed?
-When every way we fly
-We are molested equally
-By immortality.
-No respite from the inference
-That this which is begun,
-Though where its labors lie
-A bland uncertainty
-Besets the sight
-This mighty night --
-
-I feel different every time I read it--confusion, grief, dread--but the ending always agitates me: I can’t stand that a bland uncertainty could so continuously fuck up one’s ‘sight’ and ruin all sense of insight or meaning or truth in one go, no end, just blankness stretching out indefinitely, (infinitely?) stifling everything.
-
-Yours in everything,
-Taylor
-
-
-			</div>
-		</div><span class="time stamp">3/27/2020 11:31AM</span>
-	</div>
-	<div class="bubbleWrapper">
-		<div class="inlineContainer own">
-			<div class="2nd bubble">
-			 Taylor––
-
-I’ve wondered about you in your internetless apartment. I suppose at this point you must have
-bought, borrowed, or stolen some wifi to sustain your quarantine. Correct me if I’m wrong.
-My abrupt return to my hometown has rattled my brain. The room I have fashioned in my garage
-is a sanctuary. My bed is a board over six milk crates (I thought of you) with a mattress pad on
-top. I rolled out a mismatched assortment of rugs so that I don’t have to touch the cold concrete.
-My father asked me, “You know you aren’t supposed to be living here, right?” But the landlady
-is old enough that she should be worried about bigger things right now than inspecting her
-properties for stowaway tenants.
-
-It’s harder to remember the current state of affairs while in San Diego. This city lacks the visible
-grime that serves as a signal of germs in NYC. People here are slowly starting to take it
-seriously. I run through the canyons by my house (even though the parks are “closed”), and when
-I encounter others on the narrow trails, they step off the path and turn away. It feels as if I’m
-being shunned, but I’m glad they do it so that I don’t have to.
-
-I can’t tell if I’m happy or sad. I must be neither. In NYC I was overworked and in a continual
-state of exhaustion. Now I find that the days pool around me. I have time to read for pleasure and
-get eight hours of sleep. Then I hear a news report and I am slapped with the reminder that
-nothing will be the same as it was.
-
-Faithfully yours,
-Cora
-			</div>
-		</div><span class="own">3/27/2020 08:15PM</span>
-	</div>
-	<div class="bubbleWrapper">
-			<div class="otherBubble other">
-				right now I would kill for a cinnamon raisin bagel with maple walnut cream cheese, an iced coffee with cream, and a menthol to finish. I don’t know why I need to tell you so bad, but I just had to share.
-
-xxT
-
-ps have you read ultraluminous? you should
-pps will send more thoughts in a bit
-			</div>
-		</div>
-	</div><span class="other">3/28/2020 11:12PM</span>
-	<div class="bubbleWrapper">
-			<div class="ownBubble own">
-I haven't read ultraluminous but I just looked it up and now I desperately want to. 
-
-I can hear the cops on the megaphones telling people not to come to the park next to my house. Where will I run now?
-I miss you. 
-
-Be good, but not too good,
-Cora
-			</div>
-		</div><span class="own">3/29/2020 12:45PM</span>
-	</div>
-</div>
-
+   
 <div class="wrap">
     <div id="chatWindow" class="container">
         <div class="bubble left"><p>msg</p></div>
@@ -117,7 +72,7 @@ Cora
         <input id="inp" type="text" />
         <input id="btn" type="button" value="Send" />
     </div>
-</div>
+</div>		
 
     </section>
     <div id="paragraph">
