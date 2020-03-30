@@ -9,57 +9,42 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
 	<style>
-{
-  font-family: 'Avenir';
+{ box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; }
+.wrap { 
+    margin: 8px; height: 90%; width: 50%; 
+    display: flex; flex-direction: column;
 }
-.bubbleWrapper {
-	padding: 10px 10px;
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: column;
-	align-self: flex-end;
-  color: #fff;
+.container {
+    flex: 1 1 90%; display: flex; flex-direction: column; 
+    background-color: #eee; border: 1px solid #ccc; overflow: auto;
 }
-.inlineContainer {
-  display: inline-flex;
+.form { flex: 0 0 32px; display: flex; border: 1px solid #ddd; }
+.form > input[type=text] { flex: 1 1 auto; border: 1px solid #eee; }
+.form > input[type=button] { flex: 0 0 20%; border: 1px solid #eee; }
+.bubble { flex: 1 1 auto; clear: both; } /* clear the floats here on parent */
+.bubble p {
+    border-radius: 5px;
+    padding: 8px; margin: 8px 12px;
+    max-width: 80%;  /* this will make it not exceed 80% and then wrap */
+    position: relative; transition: background-color 0.5s; 
 }
-.inlineContainer.own {
-  flex-direction: row-reverse;
+.left p { background-color: #ccc; float: left; } /* floated left */
+.right p { background-color: #33c; color: #fff; float: right; } /* floated right */
+/* classes below are only for arrows, not relevant */
+.left p::before {
+    content: ''; position: absolute;
+    width: 0; height: 0; left: -8px; top: 8px;
+    border-top: 4px solid transparent;
+    border-right: 8px solid #ccc;
+    border-bottom: 4px solid transparent;
 }
-.inlineIcon {
-  width:20px;
-  object-fit: contain;
-}
-.ownBubble {
-	min-width: 60px;
-	max-width: 700px;
-	padding: 14px 18px;
-  margin: 6px 8px;
-	background-color: #5b5377;
-	border-radius: 16px 16px 0 16px;
-	border: 1px solid #443f56;
- 
-}
-.otherBubble {
-	min-width: 60px;
-	max-width: 700px;
-	padding: 14px 18px;
-  margin: 6px 8px;
-	background-color: #6C8EA4;
-	border-radius: 16px 16px 16px 0;
-	border: 1px solid #54788e;
-  
-}
-.own {
-	align-self: flex-end;
-}
-.other {
-	align-self: flex-start;
-}
-span.own,
-span.other{
-  font-size: 14px;
-  color: grey;
+.right p::after {
+    content: ''; position: absolute;
+    width: 0; height: 0; right: -8px; bottom: 8px;
+    border-top: 4px solid transparent;
+    border-left: 8px solid #33c;
+    border-bottom: 4px solid transparent;
 }
 	</style>
 		
@@ -71,46 +56,67 @@ span.other{
     <div class="A Covid Correspondence">
             <p>Taylor & Cora, in real time</p>
    
-<div class="bubbleWrapper">
-		<div class="inlineContainer">
-			<img class="inlineIcon" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png">
-			<div class="otherBubble other">
-				No ninjas!
-			</div>
-		</div><span class="other">08:41</span>
-	</div>
-	<div class="bubbleWrapper">
-		<div class="inlineContainer own">
-			<img class="inlineIcon" src="https://www.pinclipart.com/picdir/middle/205-2059398_blinkk-en-mac-app-store-ninja-icon-transparent.png">
-			<div class="ownBubble own">
-			 The first rule of being a ninja is, 'Do no harm.'
-			</div>
-		</div><span class="own">08:55</span>
-	</div>
-	<div class="bubbleWrapper">
-		<div class="inlineContainer">
-			<img class="inlineIcon" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png">
-			<div class="otherBubble other">
-				Knowing when to leave requires training.
-			</div>
-		</div>
-	</div><span class="other">10:13</span>
-	<div class="bubbleWrapper">
-		<div class="inlineContainer own">
-			<img class="inlineIcon" src="https://www.pinclipart.com/picdir/middle/205-2059398_blinkk-en-mac-app-store-ninja-icon-transparent.png">
-			<div class="ownBubble own">
-			Stunned but impressed. 
-			</div>
-		</div><span class="own">11:07</span>
-	</div>
-	<div class="bubbleWrapper">
-		<div class="inlineContainer">
-			<img class="inlineIcon" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png">
-			<div class="otherBubble other">
-				How about throwing stars?
-			</div>
-		</div><span class="other">11:11</span>
-	</div>
+<div class="wrap">
+    <div id="chatWindow" class="container">
+        <div class="bubble left"><p>To you and your garage,
+
+As I type this, all I can hear are the birds outside my window, perched out on a tree branch that’s swaying back and forth. Every few minutes, a siren will start blaring, so loud you can hear it course up and out of the streets, seeping into all of the apartments. I don’t know whether that siren is taking someone away, or picking someone up, but I know, under my skin and down to my bones, that it is for someone who is sick. When it fades, I can still hear the birds, chirping.
+
+I try to still go on runs, but it’s hard, especially when I see all of these people in masks, crouching away from one another. I hate seeing the look on someone’s face when I pass them too closely. I hate feeling myself flinch back.
+
+Mostly I stay inside now, reading. I taped up this poem on my wall. I can’t stop thinking about it. 
+
+Why should we hurry -- why indeed?
+When every way we fly
+We are molested equally
+By immortality.
+No respite from the inference
+That this which is begun,
+Though where its labors lie
+A bland uncertainty
+Besets the sight
+This mighty night --
+
+I feel different every time I read it--confusion, grief, dread--but the ending always agitates me: I can’t stand that a bland uncertainty could so continuously fuck up one’s ‘sight’ and ruin all sense of insight or meaning or truth in one go, no end, just blankness stretching out indefinitely, (infinitely?) stifling everything.
+
+Yours in everything,
+Taylor
+
+</p></div>
+        <div class="bubble left"><p>Taylor––
+
+I’ve wondered about you in your internetless apartment. I suppose at this point you must have bought, borrowed, or stolen some wifi to sustain your quarantine. Correct me if I’m wrong.
+
+My abrupt return to my hometown has rattled my brain. The room I have fashioned in my garage is a sanctuary. My bed is a board over six milk crates (I thought of you) with a mattress pad on top. I rolled out a mismatched assortment of rugs so that I don’t have to touch the cold concrete. My father asked me, “You know you aren’t supposed to be living here, right?” But the landlady is old enough that she should be worried about bigger things right now than inspecting her properties for stowaway tenants. 
+
+It’s harder to remember the current state of affairs while in San Diego. This city lacks the visible grime that serves as a signal of germs in NYC. People here are slowly starting to take it seriously. I run through the canyons by my house (even though the parks are “closed”), and when I encounter others on the narrow trails, they step off the path and turn away. It feels as if I’m being shunned, but I’m glad they do it so that I don’t have to. 
+
+I can’t tell if I’m happy or sad. I must be neither. In NYC I was overworked and in a continual state of exhaustion. Now I find that the days pool around me. I have time to read for pleasure and get eight hours of sleep. Then I hear a news report and I am slapped with the reminder that nothing will be the same as it was. 
+
+Faithfully yours,
+Cora
+</p></div>
+        <div class="bubble right"><p>right now I would kill for a cinnamon raisin bagel with maple walnut cream cheese, an iced coffee with cream, and a menthol to finish. I don’t know why I need to tell you so bad, but I just had to share.
+
+xxT
+
+ps have you read ultraluminous? you should
+pps will send more thoughts in a bit</p></div>
+        <div class="bubble left"><p>I haven't read ultraluminous but I just looked it up and now I desperately want to. 
+
+I can hear the cops on the megaphones telling people not to come to the park next to my house. Where will I run now?
+I miss you. 
+
+Be good, but not too good,
+Cora</p></div>
+        <div class="bubble right"><p>     </p></div>    
+      
+    </div>
+    <div id="inputWindow" class="form">
+        <input id="inp" type="text" />
+        <input id="btn" type="button" value="Send" />
+    </div>
+</div>
 
     </section>
     <div id="paragraph">
