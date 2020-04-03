@@ -9,15 +9,19 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
 	<style>
+
 { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; }
 .wrap { 
-    margin: 8px; height: 90%; width: 50%; 
+    margin: 8px; height: 90%; width: 100%; 
     display: flex; flex-direction: column;
 }
 .container {
+
+  margin-right: 400px;
+  margin-left: 400px;
     flex: 1 1 90%; display: flex;  flex-direction: column;
-    background-color: #eee; border: 1px solid #ccc; overflow: auto;
+    background-color: transparent; overflow: auto;
 }
 .form { flex: 0 0 32px; display: flex; border: 1px solid #ddd; }
 .form > input[type=text] { flex: 1 1 auto; border: 1px solid #eee; }
@@ -25,6 +29,7 @@ html, body { height: 100%; }
 .bubble { flex: 1 1 auto; clear: both; } /* clear the floats here on parent */
 .bubble p {
     border-radius: 5px;
+    text-align: left;
     padding: 8px; margin: 8px 12px;
     max-width: 80%;  /* this will make it not exceed 80% and then wrap */
     position: relative; transition: background-color 0.5s; 
@@ -46,6 +51,7 @@ html, body { height: 100%; }
     border-left: 8px solid #33c;
     border-bottom: 4px solid transparent;
 }
+
 	</style>
 		
 </head>
