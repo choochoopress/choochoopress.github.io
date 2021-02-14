@@ -21,14 +21,10 @@ p {
     text-align: center;
     color: #ff00ea;   
     font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
 
 }
-.blocks {
-    display: flex;
-    margin-left: 15%;
-    margin-right: 18%;
-    font-size: 20px;
-}
+
 .left:hover {
     filter: drop-shadow(3px 10px 4px #ff00ea);
 }
@@ -82,9 +78,10 @@ img {
 
 }
 .zinerow {
-    float: right;
-    margin-left: 10px;
-    margin-right: 10px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
 }
 .station {
     font-style: italic;
@@ -118,6 +115,15 @@ img {
 .zine1styles {
     color: #1eff00;
 }
+
+.text {
+    font-size: 24px;
+}
+.writtenby {
+    font-style: italic;
+    font-size: 28px;
+}
+
 .ftm {
     margin-top: 110px;
 }
@@ -140,4 +146,11 @@ img {
         font-size: 20px;
   }
   
+  }
+
+  @media (max-width: 800px) {
+    .zinerow {
+        display: inline;
+        text-align: center;
+    }
   }

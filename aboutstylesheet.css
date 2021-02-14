@@ -72,16 +72,11 @@ img {
 }
 #paragraph {
     clear: both;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5rem;
 }
-#paragraph:hover #parisimage
-{
-    visibility: visible
-}
-#parisimage {
-    visibility: hidden;
-}
+
 div {
     color: #ff1200; 
 }
