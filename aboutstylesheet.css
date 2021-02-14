@@ -88,7 +88,7 @@ div {
 
 }
 #paristext {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 ::selection {
@@ -135,5 +135,9 @@ div {
     }
 }
 
-@media screen and (max-width: 560px) {}
 
+@media (max-width: 800px) {
+    #paristext {
+        font-size: 20px;
+    }
+  }
