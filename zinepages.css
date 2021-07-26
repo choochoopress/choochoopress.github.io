@@ -19,11 +19,20 @@ img {
 }
 p {
     text-align: center;
-    color: #ff00ea;   
+    color: #ff00ea;
     font-family: 'Open Sans', sans-serif;
     font-size: 32px;
 
 }
+
+.shopnow {
+  text-align: center;
+  color: #ff00ea;
+  text-decoration: underline;
+  margin-top: 3rem;
+}
+
+
 
 .left:hover {
     filter: drop-shadow(3px 10px 4px #ff00ea);
@@ -44,7 +53,7 @@ p {
     padding: 15px;
     margin-right: 20px;
     margin-bottom: 33px;
-  
+
 }
 #hide {
     visibility: hidden;
@@ -92,10 +101,10 @@ img {
 .station:hover {
     /* animation: color-change 2s infinite; */
     text-align: center;
-  
+
     background: linear-gradient(to left, #ff00ea 20%, #1eff00 40%, #1eff00 60%, #ff00ea 80%);
     background-size: 200% auto;
-    
+
     color: #000;
     background-clip: text;
     text-fill-color: transparent;
@@ -106,7 +115,7 @@ img {
     @keyframes shine {
 
     from {background-position: 200%;}
-    
+
     to {
         background-position: -200%;
       }
@@ -145,7 +154,7 @@ img {
         margin-right: 10%;
         font-size: 20px;
   }
-  
+
   }
 
   @media (max-width: 800px) {
