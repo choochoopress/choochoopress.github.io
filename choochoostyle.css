@@ -98,10 +98,8 @@ img {
 .station:hover {
     /* animation: color-change 2s infinite; */
     text-align: center;
-  
     background: linear-gradient(to left, #ff00ea 20%, #1eff00 40%, #1eff00 60%, #ff00ea 80%);
     background-size: 200% auto;
-    
     color: #000;
     background-clip: text;
     text-fill-color: transparent;
@@ -117,7 +115,7 @@ img {
         background-position: -200%;
       }
     }
-}
+
 .zine1styles {
     color: #1eff00;
 }
