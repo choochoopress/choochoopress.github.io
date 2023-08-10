@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'Arizona';
+    font-weight: normal;
+    font-style:normal;
+    src: url(assets/EduArizonaFlare-Regular.woff) format('woff');
+  }
+
+body {
+    background-color: #F9F9F9;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+section{
+    display:grid;   
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto 1fr auto;
+    margin-top:5%;
+}
+
+header {
+    display:grid;   
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto 1fr auto;
+}
+
+.icons {
+    grid-column: 3 / span 1;
+    justify-self: end;
+    align-self: center;
+}
+
+.camera {
+    width:41px;
+}
+
+.letter {
+    width: 55px;
+}
+
+
+
+.pieces {
+    display:grid;   
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto 1fr auto;
+    bottom: 20px;
+    width:90%;
+    position: fixed;
+}
+
+
+h1 {
+    cursor: url(trainphotoshop.png), pointer;
+    font-family: 'Arizona';
+    font-size: 32px;
+}
+
+h1 a {
+    color: black;
+    text-decoration: none;
+}
+
+h2 {
+    font-family: 'Arizona';
+    font-size: 28px;
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Arizona';
+    font-size: 20px;
+    margin:0px;
+    margin-top:2%;
+}
+
+h4 {
+    font-family: 'Arizona';
+    font-size: 16px;
+    margin-top:5%;
+}
+
+a {
+    text-decoration:none;
+    color: black;
+}
+
+#shop {
+    border:.15em black solid;
+    border-radius: 5%;
+    background-color: #CDFDBF;
+    text-align: center;
+    width:60px;
+    padding:2%;
+    font-family: 'Arizona';
+    margin-top:5%;
+    margin-bottom: 5%;
+}
+
+
+#soldout {
+    border:1px black solid;
+    border-radius: 5%;
+    text-align: center;
+    width:90px;
+    padding:2%;
+    font-family: 'Arizona';
+    margin-top:5%;
+    margin-bottom: 5%;
+}
+
+.video {
+    height:100vh;
+}
+
+
+
+
+
+
+::selection {
+    background: #FEF9B6;
+}
+
+p {
+    text-align: left;
+    font-size: 36px;
+    color: black;   
+    font-family: 'Arizona', serif;
+    margin-top:0;
+}
+
+.left:hover {
+    filter: drop-shadow(3px 10px 4px #EBC8F5);
+}
+.middle:hover {
+    filter: drop-shadow(3px 10px 4px #CDFDBF);
+}
+.right:hover {
+    filter: drop-shadow(3px 10px 4px #FEF9B6);
+}
+
+#TayandEm {
+    font-size: 30px;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.paragraph {
+    clear: both;
+}
+.zine1:hover {
+    filter: drop-shadow(3px 10px 4px #e9d700);
+}
+.zine2:hover {
+    filter: drop-shadow(3px 10px 4px #e9d700);
+}
+.zine3:hover {
+    filter: drop-shadow(3px 10px 4px #e9d700);
+
+}
+.zinerow {
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.station {
+    font-style: italic;
+    color:#ff00ea;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.zine1styles {
+    color: #1eff00;
+}
+
+
+.trail { /* className for the trail elements */
+    position: absolute;
+    height: 6px; width: 6px;
+    border-radius: 3px;
+    background: teal;
+  }
+
+#description {
+ grid-column: 2 / span 2;
+}
+
+.sku {
+    grid-column: 2 / span 2;
+    column-count: 2;
+    column-gap: 10%;
+}
+
+.sku div {
+    margin-bottom:10%;
+    -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.arrow {
+    font-size:50px;
+}
+
+
+
+.zines {
+    grid-column: span 1;
+}
+
+.footer {
+    display:none;
+}
+
+
+
+@media (max-width: 480px) {
+    .pieces {
+        grid-template-columns: 1fr; 
+        row-gap:1ch;
+        display:grid;   
+        position: static;
+    }
+
+    header {
+        display:grid;   
+        grid-template-columns: 1fr; 
+        text-align: center;
+        margin-bottom: 10%;
+    }
+
+    .icons {
+        display:none;
+    }
+
+    .footer {
+        display: grid;
+        text-align: center;
+        margin-top:10%;
+    }
+
+    section{
+        display:inline;   
+
+    }
+
+    .sku {
+        column-count: 1;
+    }
+  }
