@@ -9,7 +9,11 @@ body {
     background-color: #F9F9F9;
     margin-left:5%;
     margin-right:5%;
+    cursor: url(assets/Train-01.cur),auto;
+
 }
+
+
 
 section{
     display:grid;   
@@ -51,7 +55,7 @@ header {
 
 
 h1 {
-    cursor: url(trainphotoshop.png), pointer;
+    cursor: url(assets/Train.png), auto;
     font-family: 'Arizona';
     font-size: 32px;
 }
