@@ -131,6 +131,9 @@ a {
     background: #FEF9B6;
 }
 
+#description p {
+    font-size: 30px;
+}
 p {
     text-align: left;
     font-size: 36px;
