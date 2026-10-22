@@ -295,8 +295,10 @@ img {
   grid-column: 3;
   column-count: 1;
 }
+
 .books .sku h4:first-child {
   margin-top: 0;
+}
 
 .spec-list {
   list-style: none;
@@ -307,15 +309,14 @@ img {
   line-height: 1.4;
 }
 
-}
-/*mailing list*/
+/* Mailing list */
 .mailing-list p {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: flex-end;
   gap: 10px;
-margin-top: 40px;
+  margin-top: 40px;
 }
 
 .mailing-list span,
