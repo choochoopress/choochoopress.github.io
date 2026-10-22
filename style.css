@@ -295,6 +295,8 @@ img {
   grid-column: 3;
   column-count: 1;
 }
+.books .sku h4:first-child {
+  margin-top: 0;
 
 .spec-list {
   list-style: none;
