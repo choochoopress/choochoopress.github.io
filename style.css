@@ -285,6 +285,27 @@ img {
         column-count: 1;
     }
   }
+
+.books {
+  display: grid;
+  grid-template-columns: auto 1fr 2fr;
+  gap: 40px;
+  padding: 20px;
+}
+
+.spec-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  .books {
+    grid-template-columns: 1fr;
+  }
+}
 /*mailing list*/
 .mailing-list p {
   display: flex;
