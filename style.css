@@ -293,10 +293,16 @@ img {
   padding: 20px;
 }
 
+.books .sku {
+  grid-column: 3;
+  column-count: 1;
+}
+
 .spec-list {
   list-style: none;
   padding: 0;
   margin: 30px 0 0;
+  font-family: 'Arizona', serif;
   font-size: 0.8rem;
   line-height: 1.4;
 }
@@ -304,6 +310,10 @@ img {
 @media (max-width: 700px) {
   .books {
     grid-template-columns: 1fr;
+  }
+
+  .books .sku {
+    grid-column: auto;
   }
 }
 /*mailing list*/
