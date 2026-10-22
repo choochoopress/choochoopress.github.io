@@ -286,11 +286,9 @@ img {
     }
   }
 
-.books {
-  display: grid;
-  grid-template-columns: auto 1fr 2fr;
-  gap: 40px;
-  padding: 20px;
+.books .book-specs {
+  grid-column: 2;
+  padding-right: 40px;
 }
 
 .books .sku {
@@ -307,14 +305,6 @@ img {
   line-height: 1.4;
 }
 
-@media (max-width: 700px) {
-  .books {
-    grid-template-columns: 1fr;
-  }
-
-  .books .sku {
-    grid-column: auto;
-  }
 }
 /*mailing list*/
 .mailing-list p {
