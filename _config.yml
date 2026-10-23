@@ -1,1 +1,5 @@
 
+collections:
+     books:
+       output: true
+       permalink: /:name:output_ext
