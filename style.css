@@ -308,8 +308,26 @@ img {
   font-size: 0.8rem;
   line-height: 1.4;
 }
+.books .book-images {
+  grid-column: 2 / span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
 
-/* Mailing list */
+.books .book-images img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+@media (max-width: 480px) {
+  .books .book-images {
+    grid-template-columns: 1fr;
+  }
+}
+/*mailing list */
 .mailing-list p {
   display: flex;
   flex-wrap: wrap;
